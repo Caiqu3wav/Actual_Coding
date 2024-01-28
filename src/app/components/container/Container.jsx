@@ -1,9 +1,12 @@
-export default function Container() {
+import Image from "next/image";
+import ActualLogo from "../../../../public/assets/img/actlogo.png"
+import "./Container.css"
 
-    return(
-        <div className="flex items-center flex-col 
-        h-fit pb-[50px]">
-            
-        </div>
-    );
-}
+export default function Container(props){
+  return (
+    <div className="hero-container w-[700px] mt-4 ml-8 flex flex-col pl-3 pr-3 rounded-3xl pb-6">
+    <Image src={ActualLogo} className="w-[200px] self-center" alt="Actual coding logo"/>
+      {props.children}
+    </div>
+  );
+};
