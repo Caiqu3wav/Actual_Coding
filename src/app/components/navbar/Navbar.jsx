@@ -85,7 +85,7 @@ export default function Navbar() {
          
          {sideList.map(({ title, path }, index) => (
     <Link href={path} key={index}>
-        <span className="flex items-center p-4 hover:bg-pink-500 hover:text-purple-600">
+        <span className="flex items-center p-4 hover:bg-blue-dark hover:text-purple-600">
           <span className="border-b-4">{title}</span>
         </span>
     </Link>
