@@ -1,17 +1,22 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
-import Container from "../Container/Container";
+import ContainerRep from "../Container/Container";
 import MainInfoContainer from '../mainInfoContainer/MainInfoContainer';
 import FuturePC from "../../../../public/assets/img/futuristic-pc.jpg";
+import BottomShadowHeader from "../bottomshadow/BottomShadow";
 import TopicsBar from "../topicsbar/TopicsBar";
+import ContainerDad from "../Container/ContainerDad";
+;
+import Link from "next/link";
 
 export default function Hero() {
 
     return(
         <div className="flex flex-col">
+          <BottomShadowHeader/>
             <MainInfoContainer/>
-            <div className="flex gap-[70px]">
-            <Container>
+            <ContainerDad>
+            <ContainerRep>
                 <p className="text-md ">"O panorama de desenvolvimento de software em 2024 é dinamico, com tendências
                 tipo desenvolvimento impulsionado por I.A, computação quantica, e plataformas low-code
                 remodelando a industria. Em termos de evolução técnologia, desenvolvedores
@@ -83,9 +88,10 @@ Em conclusão, o cenário do desenvolvimento de software está preparado para mu
   <br /> <br />
 Prepare-se para um ano emocionante, à medida que testemunhamos a transformação do desenvolvimento de software em 2024 e além.
                 </p>
-            </Container>
+                <Link href="/blogs"><h2>Veja mais blogs sobre</h2></Link>
+            </ContainerRep>
             <TopicsBar/>
-            </div>
+            </ContainerDad>
         </div>
     );
 }

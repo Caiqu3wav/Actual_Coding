@@ -1,4 +1,4 @@
 .main-info-cont{
-    background-color: rgb(146, 146, 146);
+    background: radial-gradient(circle, rgba(170,230,201,1) 0%, rgba(170,170,255,1) 59%, rgba(178,182,182,1) 100%);
     border-radius: 3% 25% 6% 25% / 25% 25% 25% 25%;
 }
