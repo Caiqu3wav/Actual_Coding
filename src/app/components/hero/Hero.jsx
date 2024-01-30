@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
-import ContainerRep from "../Container/Container";
+import ContainerRep from "../container/Container";
 import MainInfoContainer from '../mainInfoContainer/MainInfoContainer';
 import FuturePC from "../../../../public/assets/img/futuristic-pc.jpg";
 import BottomShadowHeader from "../bottomshadow/BottomShadow";
 import TopicsBar from "../topicsbar/TopicsBar";
-import ContainerDad from "../Container/ContainerDad";
+import ContainerDad from "../container/ContainerDad";
 ;
 import Link from "next/link";
 

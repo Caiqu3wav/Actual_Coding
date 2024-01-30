@@ -2,8 +2,8 @@ import LanguagesDat from "../../../public/assets/img/programming-languages.jpg";
 import Image from "next/image";
 import Header from "../components/header/Header";
 import TopicsBar from "../components/topicsbar/TopicsBar";
-import ContainerDad from "../components/Container/ContainerDad.jsx";
-import ContainerRep from "../components/Container/Container.jsx";
+import ContainerDad from "../components/container/ContainerDad.jsx";
+import ContainerRep from "../components/container/Container.jsx";
 import BottomShadowHeader from "../components/bottomshadow/BottomShadow";
 import "./actuallanguages.css"
 import IndeedStatistic from "../../../public/assets/img/Jobs-on-Indeed.jpg";
