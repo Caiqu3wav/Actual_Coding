@@ -1,5 +1,3 @@
-import ContainerRep from "./Container"
-import TopicsBar from "../topicsbar/TopicsBar"
 
 export default function ContainerDad(props) {
     return (
