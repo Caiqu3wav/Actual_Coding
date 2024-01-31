@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+'use client'
 import Image from "next/image";
 import ContainerRep from "../container/Container";
 import MainInfoContainer from '../mainInfoContainer/MainInfoContainer';
@@ -6,10 +7,12 @@ import FuturePC from "../../../../public/assets/img/futuristic-pc.jpg";
 import BottomShadowHeader from "../bottomshadow/BottomShadow";
 import TopicsBar from "../topicsbar/TopicsBar";
 import ContainerDad from "../container/ContainerDad";
-;
+import Loading from "../loading/loading";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Hero() {
+  const [isLoading, setIsLoading] = useState(false);
 
     return(
         <div className="flex flex-col">
@@ -88,7 +91,7 @@ Em conclusão, o cenário do desenvolvimento de software está preparado para mu
   <br /> <br />
 Prepare-se para um ano emocionante, à medida que testemunhamos a transformação do desenvolvimento de software em 2024 e além.
                 </p>
-                <Link href="/blogs"><h2>Veja mais blogs sobre</h2></Link>
+                <Link href="/blogs"><h2 className="text-3xl text-blue-dark self-center">Veja mais blogs sobre</h2></Link>
             </ContainerRep>
             <TopicsBar/>
             </ContainerDad>
