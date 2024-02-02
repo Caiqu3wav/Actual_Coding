@@ -15,6 +15,7 @@ const config: Config = {
       'midtwo': {'max': '553px'},
       'midtwo2': {'max': '538px'},
       'midthree': {'max': '600px'},
+      'midfour': {'max': '452px'},
       'low': {'max': '400px'},
       'lowone': {'max': '382px'},
       'lowtwo': {'max': '370px'},

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+
+.bounce2 {
+    animation: bounce2 2s ease infinite;
+  }
+  @keyframes bounce2 {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-30px);}
+      60% {transform: translateY(-15px);}
+  }
+
+  .hero-container{
+    background: linear-gradient(rgba(124, 21, 209, 0.9), rgba(186, 204, 223, 0.7));
+}
+@media screen and (max-width: 452px) {
+    .caique-name{
+        font-size: 1.5rem !important;
+    }
+
+    .links-inform{
+        font-size: 0.7rem;
+    }
+
+}
+
+
+@media screen and (max-width: 348px) {
+    .caique-name{
+        font-size: 1rem !important;
+    }
+}
+
+@media screen and (max-width: 336px) {
+.hero-container{
+    width: 85% !important;
+}
+}
+
+
+
+.caique-name {
+    font-family: "Sixtyfour", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    font-style: normal;
+    font-size: 2rem;
+    font-variation-settings:
+      "BLED" 0,
+      "SCAN" 0;
+  }
