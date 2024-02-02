@@ -16,7 +16,7 @@ const [ordenacao, setOrdenacao] = useState('recentes');
           const response = await fetch('/api/blogs');
           const data = await response.json();
     
-          const blogsOrdenados = data.sort((a, b) => {
+          const blogsOrdenados = data.sort((a: { dataLnc: string | number | Date; }, b: { dataLnc: string | number | Date; }) => {
             const dataA = new Date(a.dataLnc);
             const dataB = new Date(b.dataLnc);
     
