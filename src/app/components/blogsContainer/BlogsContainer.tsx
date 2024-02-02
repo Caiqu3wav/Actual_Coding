@@ -6,9 +6,20 @@ import "../container/Container.css";
 import "./BlogsContainer.css"
 import Link from "next/link";
 
+interface Blog {
+  id: number;
+  nome: string;
+  descr: string;
+  imagem: string;
+  link: string;
+  dataLnc: string; 
+}
+
 export default function BlogsContainer() {
-const [blogs, setBlogs] = useState([]);
+  const [blogs, setBlogs] = useState<Blog[]>([]);
 const [ordenacao, setOrdenacao] = useState('recentes');
+
+
    
     useEffect(() => {
       async function fetchBlogs() {
@@ -16,11 +27,17 @@ const [ordenacao, setOrdenacao] = useState('recentes');
           const response = await fetch('/api/blogs');
           const data = await response.json();
     
-          const blogsOrdenados = data.sort((a: { dataLnc: string | number | Date; }, b: { dataLnc: string | number | Date; }) => {
+          const blogsOrdenados = data.sort((a: Blog, b: Blog) => {
             const dataA = new Date(a.dataLnc);
             const dataB = new Date(b.dataLnc);
+
+            if (isNaN(dataA.getTime()) || isNaN(dataB.getTime())) {
+              return 0;
+            }
+  
+  
     
-            return ordenacao === 'recentes' ? dataB - dataA : dataA - dataB;
+            return ordenacao === 'recentes' ? dataB.getTime() - dataA.getTime() : dataA.getTime() - dataB.getTime();
           });
     
           setBlogs(blogsOrdenados);
