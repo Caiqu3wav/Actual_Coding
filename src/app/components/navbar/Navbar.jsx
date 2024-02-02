@@ -59,9 +59,9 @@ export default function Navbar() {
         <nav className="ml-14 flex justify-between h-fit low:w-[90px low:mr-0]">
             <ul className="flex list-none no-underline gap-5">
                 <Link href="/"><li>Home</li></Link>
-                <li>Blogs</li>
+                <Link href="/blogs"><li>Blogs</li></Link>
                 <li>Topicos</li>
-                <li>Sobre</li>
+                <Link href="/about"><li>Sobre</li></Link>
             </ul>
             <button aria-label="Open Menu" onClick={toggleMenu} className="hidden self-center">
                 <GiHamburgerMenu size={60} className="low:size-10" style={{ color: 'purple' }} />
