@@ -13,6 +13,7 @@ import { IoIosTimer } from "react-icons/io"
 import { GrStatusGood } from "react-icons/gr";
 import { LuHelpingHand } from "react-icons/lu";
 import { Suspense } from "react";
+import ScrollToTopButton from "../components/ScrollUpBtn";
 
 export default function IaBlog() {
     return(
@@ -149,6 +150,7 @@ A revisão de código é um processo de avaliação que aproveita o poder da IA 
             <TopicsBar/>
             </ContainerDad>
         </div>
+        <ScrollToTopButton/>
         </main>
     );
 }

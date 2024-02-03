@@ -4,6 +4,7 @@
 
 body{
   background: linear-gradient(gray, rgb(28, 62, 92));
+  background-repeat: no-repeat;
 }
 
 main{

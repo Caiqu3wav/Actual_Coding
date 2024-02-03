@@ -51,7 +51,6 @@ const [ordenacao, setOrdenacao] = useState('recentes');
 
     const imagesW = "200px";
     
-
     return(
         <div className="hero-container self-center w-[89%] h-fit lowtwo3:w-[80%] midtwo2:w-[90%] lowtwo:ml-2 flex flex-col pl-3 pr-3 rounded-3xl pb-6 items-center
         justify-center mt-2">

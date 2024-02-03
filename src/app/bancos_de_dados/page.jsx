@@ -12,7 +12,7 @@ import MysqlLogo from "../../../public/assets/img/mysql-logo-png-transparent.png
 import Oracle from "../../../public/assets/img/oracledb-logo-removebg-preview.png";
 import CassandraLogo from "../../../public/assets/img/Apache_Cassandra-Logo.png";
 import RedisLogo from "../../../public/assets/img/Redis-Logo.png";
-
+import ScrollToTopButton from "../components/ScrollUpBtn";
 
 export default function databasesBlog() {
     return (
@@ -93,6 +93,7 @@ Assim, a escolha inteligente entre essas abordagens molda a jornada digital do s
       <TopicsBar/>
       </ContainerDad>
         </div>
+        <ScrollToTopButton/>
         </main>
     );
 }

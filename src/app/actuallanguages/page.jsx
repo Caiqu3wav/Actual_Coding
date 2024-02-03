@@ -5,9 +5,11 @@ import TopicsBar from "../components/topicsbar/TopicsBar";
 import ContainerDad from "../components/container/ContainerDad.jsx";
 import ContainerRep from "../components/container/Container.jsx";
 import BottomShadowHeader from "../components/bottomshadow/BottomShadow";
-import "./actuallanguages.css"
+import "./actuallanguages.css";
 import IndeedStatistic from "../../../public/assets/img/Jobs-on-Indeed.jpg";
 import GlassdoorStatistic from "../../../public/assets/img/Jobs-on-Glassdoor.jpg";
+import ScrollToTopButton from "../components/ScrollUpBtn";
+
 
 export default function ActualLanguages() {
     return(
@@ -166,6 +168,7 @@ baixo nível oferecem controle e otimização, enquanto as linguagens de alto n�
             <TopicsBar/>
             </ContainerDad>
         </div>
+        <ScrollToTopButton/>
         </main>
     );
 }
