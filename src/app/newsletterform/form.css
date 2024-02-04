@@ -17,3 +17,11 @@ input{
     font-size: 2rem;
     font-weight: bold;
 }
+
+.form-response{
+    visibility: hidden;
+}
+
+#mc_embed_signup{
+    
+}

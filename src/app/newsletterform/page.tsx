@@ -1,131 +1,126 @@
-"use client";
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-css-tags */
+/* eslint-disable react/jsx-no-duplicate-props */
+/* eslint-disable @next/next/no-sync-scripts */
 import "./form.css";
-import React, { useState, useRef, useEffect } from "react";
-import { Formik, Form as FormikForm, Field, ErrorMessage } from "formik"; // Renomeie o 'Form' aqui
-import * as Yup from "yup";
 import Image from "next/image";
 import ActualLogo from "../../../public/assets/img/actcodlogo.png";
-import Confetti from "react-confetti/dist/types/Confetti";
-import { IoIosCloseCircle } from "react-icons/io";
 import Header from "../components/header/Header";
-import BottomShadow from "../components/bottomshadow/BottomShadow"
-import axios from "axios";
 
-type Props = {};
-const requiredSchema = Yup.object({
-  email: Yup.string().email("Invalid email").required("Email is required"),
-});
 
-export default function Form({}: Props) {
-    const [status, setStatus] = useState<number | null>(null);
-    const [message, setMessage] = useState<string>("");
-    const [buttonDisabled, setButtonDisabled] = useState<boolean>(false);
-    const [submitting, setSubmitting] = useState<boolean>(false);
-    const [run, setRun] = useState<boolean>(false);
-    const [totalCounts, setTotalCounts] = useState<number>(400);
-    const [showConfetti, setShowConfetti] = useState<boolean>(false);
-    const [dimensions, setDimensions] = useState({
-        width: 0,
-        height: 0,
-      });
-      useEffect(() => {
-        const { innerWidth: width, innerHeight: height } = window;
-        setDimensions({
-          width,
-          height,
-        });
-      }, []);
-
+export default function Form() {
+   
     return(
-        <main className="flex flex-col items-center justify-center h-[100vh]">
+        <main className="flex flex-col items-center justify-center">
             <Header/>
-            <BottomShadow/>
         <div className="hero-container flex flex-col items-center justify-center w-[70%]
-        h-[500px] rounded-lg">
+        h-[530px] rounded-lg mt-3 low:h-fit low:pb-4">
             <Image src={ActualLogo} className="w-[170px]" alt="actual coding logo"/>
             <h1 className="form-h1">Newsletter</h1>
             <p className="text-blue-dark text-xl">Fique sempre por dentro das tendências, técnologias e informações.</p>
-            <Formik
-          initialValues={{
-            email: "",
-          }}
-          validationSchema={requiredSchema}
-          onSubmit={async (values, { resetForm }) => {
-            setButtonDisabled(true);
-            try {
-              const response = await fetch("/api/subscribenst", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                  email: values?.email,
-                }),
-              });
-              const datas = await response.json();
-              if (datas.status >= 400) {
-                setStatus(datas.status);
-                setMessage(
-                  "Error joining the newsletter. You can directly contact me at github@ebraj."
-                );
-                setTimeout(() => {
-                  setMessage("");
-                  setButtonDisabled(false);
-                }, 2000);
-                return;
-              }
-
-              setStatus(201);
-              setMessage("Thank you for subscribing my newsletter 👻.");
-              setShowConfetti(true);
-              setRun(true);
-              setTimeout(() => {
-                setTotalCounts(0);
-                setMessage("");
-                resetForm();
-                setButtonDisabled(false);
-              }, 4000);
-              setTotalCounts(400);
-            } catch (error) {
-              setStatus(500);
-              setMessage(
-                "Error joining the newsletter."
-              );
-              setTimeout(() => {
-                setMessage("");
-                setButtonDisabled(false);
-              }, 2000);
-            }
-          }}
+            <div id="mc_embed_shell" className="">
+      <link
+        href="//cdn-images.mailchimp.com/embedcode/classic-061523.css"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <div id="mc_embed_signup">
+        <form
+          action="https://app.us14.list-manage.com/subscribe/post?u=30c3682829e7d5c08a04165c3&amp;id=947c70e02c&amp;f_id=00b501e3f0"
+          method="post"
+          id="mc-embedded-subscribe-form"
+          name="mc-embedded-subscribe-form"
+          className="validate"
+          target="_blank"
         >
-              <FormikForm>
-            <div className="flex items-center space-x-2">
-              <Field
-                type="email"
-                name="email"
-                className="w-full px-5 py-3 bg-gray-100 rounded-md outline-none grow"
-                placeholder="Enter your email"
-                autoComplete="off"
-              />
-              <button
-                className="px-5 py-3 font-bold text-gray-100 transition-all bg-gray-800 rounded-md hover:bg-gray-900 hover:scale-105 disabled:opacity-80"
-                type="submit"
-                disabled={buttonDisabled}
-              >
-                {submitting ? "Submitting" : "Submit"}
-              </button>
+          <div id="mc_embed_signup_scroll">
+            <h2>Inscreva-se</h2>
+            <div className="indicates-required">
+              <span className="asterisk">*</span> indicates required
             </div>
-            {message && (
-              <p
-                className={`${
-                  status !== 201 ? "text-red-500" : "text-green-500"
-                } pt-4 font-black `}
-              >
-                {message}
-              </p>
-            )}
-          </FormikForm>
-        </Formik>
+            <div className="mc-field-group">
+              <label htmlFor="mce-EMAIL">
+                Endereço de e-mail <span className="asterisk">*</span>
+              </label>
+              <input
+                type="email"
+                name="EMAIL"
+                className="required email"
+                id="mce-EMAIL"
+                value=""
+              />
+              <span id="mce-EMAIL-HELPERTEXT" className="helper_text"></span>
+            </div>
+            <div id="mce-responses" className="clear foot">
+              <div
+                className="response hidden form-response"
+                id="mce-error-response"
+              ></div>
+              
+              <div
+                className="response hidden form-response"
+                id="mce-success-response"
+              ></div>
+            </div>
+            <div
+              aria-hidden="true"
+              className="absolute left-[-5000px]"
+            >
+              {/* Real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
+              <input
+                type="text"
+                name="b_30c3682829e7d5c08a04165c3_947c70e02c"
+                value=""
+              />
+            </div>
+            <div className="optionalParent">
+              <div className="clear foot">
+                <input
+                  type="submit"
+                  name="subscribe"
+                  id="mc-embedded-subscribe"
+                  className="button"
+                  value="Subscribe"
+                />
+                <p className="mailshimp-p">
+                  <a
+                    href="http://eepurl.com/iJoTDk"
+                    title="Mailchimp - email marketing made easy and fun"
+                  >
+                    <span>
+                      <img
+                        className="refferal_badge"
+                        src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-light.svg"
+                        alt="Intuit Mailchimp"
+                      />
+                    </span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <script
+        type="text/javascript"
+        src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+      ></script>
+      <script type="text/javascript">
+        {`
+          (function($) {
+            window.frames = new Array();
+            window.ftypes = new Array();
+            fnames[0]='EMAIL';ftypes[0]='email';
+            fnames[1]='FNAME';ftypes[1]='text';
+            fnames[2]='LNAME';ftypes[2]='text';
+            fnames[3]='ADDRESS';ftypes[3]='address';
+            fnames[4]='PHONE';ftypes[4]='phone';
+            fnames[5]='BIRTHDAY';ftypes[5]='birthday';
+          }(jQuery));
+          var $mcj = jQuery.noConflict(true);
+        `}
+      </script>
+    </div>
             </div>
         </main>
     );
