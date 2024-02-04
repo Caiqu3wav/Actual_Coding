@@ -49,6 +49,13 @@ input{
     }
 }
 
+#mc_embed_signup{
+    border-radius: 20px;
+    background: linear-gradient(rgb(231, 237, 243, 0.7),rgb(180, 219, 255, 0.9),) !important;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
 @media screen and (max-width: 537px) {
     #mc_embed_signup{
         width: 300px !important;

@@ -12,7 +12,7 @@ import BottomShadow from "../components/bottomshadow/BottomShadow"
 export default function Form() {
 
   const mcSignupStyle: React.CSSProperties = {
-    background: '#fff',
+    background: 'rgb(231, 237, 243, 0.7)',
     clear: 'left',
     font: '14px Helvetica, Arial, sans-serif',
     width: '600px',
