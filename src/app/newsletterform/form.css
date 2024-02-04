@@ -36,3 +36,33 @@ input{
 .p_form_mailshimp span{
     display: inline-block; background-color: black; border-radius: 4px;
 }
+
+@media screen and (max-width: 858px) {
+    #mc_embed_signup{
+        width: 500px !important;
+    }
+}
+
+@media screen and (max-width: 723px) {
+    #mc_embed_signup{
+        width: 380px !important;
+    }
+}
+
+@media screen and (max-width: 537px) {
+    #mc_embed_signup{
+        width: 300px !important;
+    }
+}
+
+@media screen and (max-width: 438px) {
+    #mc_embed_signup{
+        width: 232px !important;
+    }
+}
+
+@media screen and (max-width: 344px) {
+    #mc_embed_signup{
+        width: 160px !important;
+    }
+}
