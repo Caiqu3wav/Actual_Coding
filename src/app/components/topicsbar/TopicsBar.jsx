@@ -39,6 +39,9 @@ export default function TopicsBar() {
             <li className="border-t-2 border-violet-700 pt-2">
             <Link href="/bancos_de_dados" className=""><button>Bancos de dados</button></Link>
             </li>
+            <li className="border-t-2 border-violet-700 pt-2">
+            <Link href="/goodcode" className=""><button>Guia para um bom código</button></Link>
+            </li>
            </ul>
            <div className="ml-2 mr-2 h-[100px] border-t-2 border-b-2">
            <button onClick={toggleListTwo} className="mt-[10%] w-[90%] flex justify-between midtwo2:flex-col">

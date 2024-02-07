@@ -9,6 +9,10 @@ imagem: "/assets/img/artificiaal-inteligence-computing.jpg", dataLnc: '2024/02/0
 descr: "Explore o fascinante universo dos bancos de dados, fundamentais na era digital, onde informações cruciais são organizadas, recuperadas e gerenciadas.",
 imagem: "/assets/img/databasesrepresentations.jpg", dataLnc: '2024/02/02', link: "/bancos_de_dados"
 },
+{id: 4, nome: "O guia para um bom código", 
+descr: "Explore as fundações do desenvolvimento de software com nosso blog dedicado às boas práticas de código, baseado nas perspicazes observações de Alex Xu.",
+imagem: "/assets/img/code-analize.webp", dataLnc: '2024/07/02', link: "/bancos_de_dados"
+},
 ];
 
 export async function GET(request: Request) {

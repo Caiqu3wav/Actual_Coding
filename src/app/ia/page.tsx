@@ -12,7 +12,6 @@ import BottomShadowHeader from "../components/bottomshadow/BottomShadow";
 import { IoIosTimer } from "react-icons/io"
 import { GrStatusGood } from "react-icons/gr";
 import { LuHelpingHand } from "react-icons/lu";
-import { Suspense } from "react";
 import ScrollToTopButton from "../components/ScrollUpBtn";
 
 export default function IaBlog() {
