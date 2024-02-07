@@ -11,7 +11,7 @@ imagem: "/assets/img/databasesrepresentations.jpg", dataLnc: '2024/02/02', link:
 },
 {id: 4, nome: "O guia para um bom código", 
 descr: "Explore as fundações do desenvolvimento de software com nosso blog dedicado às boas práticas de código, baseado nas perspicazes observações de Alex Xu.",
-imagem: "/assets/img/code-analize.webp", dataLnc: '2024/07/02', link: "/bancos_de_dados"
+imagem: "/assets/img/code-analize.webp", dataLnc: '2024/07/02', link: "/goodcode"
 },
 ];
 
