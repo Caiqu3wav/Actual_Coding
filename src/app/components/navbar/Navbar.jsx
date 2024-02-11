@@ -3,7 +3,7 @@ import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import "./Navbar.css"
 import { useState, useEffect } from "react";
-import { IoMdCloseCircleOutline } from "react-icons/io";
+
 
 export default function Navbar() {
     const [isActive, setIsActive] = useState(false);
@@ -19,10 +19,6 @@ export default function Navbar() {
         {
           title: 'Blogs',
           path: '/blogs',
-        },
-        {
-          title: 'Topicos',
-          path: '/topicos',
         },
         {
           title: 'Sobre',
@@ -57,10 +53,9 @@ export default function Navbar() {
    
     return(
         <nav className="ml-14 flex justify-between h-fit low:w-[90px low:mr-0]">
-            <ul className="flex list-none no-underline gap-5">
+            <ul className="flex list-none no-underline gap-7 text-[23px] font-semibold">
                 <Link href="/"><li>Home</li></Link>
                 <Link href="/blogs"><li>Blogs</li></Link>
-                <li>Topicos</li>
                 <Link href="/about"><li>Sobre</li></Link>
             </ul>
             <button aria-label="Open Menu" onClick={toggleMenu} className="hidden self-center">

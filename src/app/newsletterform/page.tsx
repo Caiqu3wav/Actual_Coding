@@ -19,11 +19,11 @@ export default function Form() {
   };
 
     return(
-        <main className="flex flex-col items-center justify-center">
+        <main className="flex flex-col items-center justify-center pb-6">
             <Header/>
             <BottomShadow/>
-        <div className="hero-container flex flex-col items-center justify-center w-[70%]
-        h-[500px] rounded-lg low:h-fit low:pb-4">
+        <div className="hero-container flex flex-col items-center w-[70%]
+        h-[650px] mt-2 rounded-lg low:h-fit low:pb-4">
             <Image src={ActualLogo} className="w-[170px]" alt="actual coding logo"/>
             <h1 className="form-h1">Newsletter</h1>
             <p className="text-blue-dark text-xl">Fique sempre por dentro das tendências, técnologias e informações.</p>
