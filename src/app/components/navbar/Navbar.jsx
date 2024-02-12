@@ -22,7 +22,7 @@ export default function Navbar() {
         },
         {
           title: 'Sobre',
-          path: '/sobre',
+          path: '/about',
         },
       ];
 
