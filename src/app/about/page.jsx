@@ -1,5 +1,5 @@
 import Header from "../components/header/Header";
-import CaiqueAnimation from "../../../public/assets/img/Caique-character15(producing).png";
+import CaiqueAnimation from "../../../public/assets/img/Caique-character9(trapper).png";
 import BottomShadowHeader from "../components/bottomshadow/BottomShadow";
 import Image from "next/image";
 import "./about.css"
